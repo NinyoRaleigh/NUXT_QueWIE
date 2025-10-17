@@ -18,7 +18,7 @@
                 text="Real-Time Notifications & Alerts"
                 description="QUEWIE notifies users via SMS, mobile app, or on-screen display when their turn is approaching, ensuring they never miss their slot."
                 image="/images/features/realtimenotif.png"
-                link="#"
+                link="/features/real-time-notifications-and-alerts"
             />
             
             <FeaturesFeatureProps
@@ -26,7 +26,7 @@
                 text=" Centralized Dashboard"
                 description="QUEWIE features a powerful admin dashboard that allows administrators to view and manage all queues across departments or branches in real time."
                 image="/images/features/centralizeddashboard.png"
-                link="#"
+                link="/features/centralized-dashboard"
             />
             
             <FeaturesFeatureProps
@@ -34,7 +34,7 @@
                 text=" Multi-Channel Access"
                 description="QUEWIE is a versatile, web-based, mobile, and kiosk-ready platform designed for flexible use across sectors like hospitals, government offices, retail, and schools."
                 image="/images/features/multichannelaccess.png"
-                link="#"
+                link="/features/multi-channel-access"
             />
             
             <FeaturesFeatureProps
@@ -42,7 +42,7 @@
                 text="Smart Prioritization & Auto Routing"
                 description="QUEWIE intelligently manages queues by dynamically assigning customers to available counters or service agents, ensuring faster and more efficient service delivery."
                 image="/images/features/smartprioritizing.png"
-                link="#"
+                link="/features/smart-prioritization-and-auto-routing"
             />
             
             <FeaturesFeatureProps
@@ -50,7 +50,7 @@
                 text=" Multi-Branch & Department Management"
                 description="It offers centralized management for multiple branches, with customizable access for administrators to ensure secure and organized operations."
                 image="/images/features/multibranchdeptmngmnt.png"
-                link="#"
+                link="/features/multi-branch-and-department-management"
             />
             
             <FeaturesFeatureProps
@@ -58,7 +58,7 @@
                 text="Feedback & Service Rating"
                 description="It includes a rating system for customer feedback, helping organizations assess satisfaction and improve services."
                 image="/images/features/feedbackservicerating.png"
-                link="#"
+                link="/features/feedback-and-service-rating"
             />
             
            

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="w-full fixed z-999 bg-white" >
+    <div class="w-full fixed z-999 bg-white max-w-[1920px]" >
         <div class="w-full px-20 py-2 shadow-lg flex justify-between items-center">
             <!-- app logo -->
             <div class="flex items-center relative space-x-25">

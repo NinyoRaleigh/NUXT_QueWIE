@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div>
+    <div class=" max-w-[1920px]">
         <Header />
         <slot />
         <Footer />

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-[689px] bg-gray-50 py-20 px-21.75 shadow-[0px_8px_7.3px_1px_#00000008] font-sans">
+    <div class="h-172.5 bg-gray-50 py-20 px-21.75 shadow-[0px_8px_7.3px_1px_#00000008] font-sans">
         <div class="h-132 bg-white py-21 px-9 rounded-2xl">
             <div class=" flex items-center  justify-between  h-full">
                 <!-- left -->
@@ -10,12 +10,12 @@
                         
                         <h1 class="font-medium text-2xl leading-relaxed w-126">The QUEWIE Way: <span
                                 class="text-[#388FF0]"> Stress-Free Service, Happier Customers </span></h1>
-                        <p class="font-normal text-xl relative leading-loose tracking-wide text-[#696984] w-140">QUEWIE
+                        <p class="font-normal text-xl relative leading-loose tracking-wide text-gray-500 w-140">QUEWIE
                             simplifies workflows, eases employee stress, and ensures faster, smoother service for
                             happier customers.</p>
                         
                         <p
-                            class="font-normal text-xl leading-loose text-[#696984] underline  underline-offset-1">
+                            class="font-normal text-xl leading-loose text-gray-500 underline  underline-offset-1">
                             Learn more</p>
                     </div>
                 </div>

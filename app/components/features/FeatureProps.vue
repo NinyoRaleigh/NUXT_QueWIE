@@ -1,13 +1,13 @@
 <script setup lang="ts">
 
-const props = defineProps<{
-    title: string;
-    text: string;
-    description: string;
-    image: string;
-    link: string;
+defineProps<{
+    title: string,
+    text: string,
+    description: string,
+    image: string,
+    link: string,
 }>();
-
+    
 </script>
 
 <template>
@@ -19,14 +19,14 @@ const props = defineProps<{
                 <div class=" bg-[#388FF0] w-6 h-5.5 rounded-full bottom-1/5 absolute left-4/5  "></div>
                 <div class="space-y-7 relative">
 
-                    <h1 class="font-medium text-2xl leading-relaxed w-120"> {{ props.title }}<span
+                    <h1 class="font-medium text-2xl leading-relaxed w-120"> {{ title }}<span
                             class="text-[#388FF0]">
-                            {{ props.text }} </span></h1>
-                    <p class="font-normal text-xl leading-8 tracking-wide text-[#696984] w-141">{{ props.description }}
+                            {{ text }} </span></h1>
+                    <p class="font-normal text-xl leading-8 tracking-wide text-gray-500 w-141">{{ description }}
                     </p>
 
-                    <p class="font-normal text-xl leading-loose text-[#696984] underline underline-offset-1 hover:text-[#388FF0] transition">
-                        <NuxtLink :to="props.link">Learn More</NuxtLink>
+                    <p class="font-normal text-xl leading-loose text-gray-500 underline underline-offset-1 hover:text-[#388FF0] transition">
+                        <NuxtLink :to="link">Learn More</NuxtLink>
                     </p>
 
                 </div>
@@ -37,7 +37,7 @@ const props = defineProps<{
         <div class="w-1/2 h-full relative ">
             <div class="w-27 h-24 bg-[#272727] rounded-3xl absolute right-117"></div>
             <div class="w-45 h-41 bg-[#388FF0] rounded-3xl absolute right-0 bottom-0"></div>
-            <img :src="props.image" class="w-136 h-82 absolute right-4 top-1/2 -translate-y-1/2">
+            <img :src="image" class="w-136 h-82 absolute right-4 top-1/2 -translate-y-1/2">
         </div>
     </div>
 </template>
