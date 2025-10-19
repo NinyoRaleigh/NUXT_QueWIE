@@ -14,7 +14,7 @@
                 title="CiviQ" 
                 text="Government Offices" 
                 description="streamlines citizen services through organized queue  flow, enabling digital ticketing and real-time updates. By reducing overcrowding in public halls and minimizing wait-related frustrations, it enhances transparency, improves service efficiency, and significantly reduces the volume of complaints." 
-                image="/images/solutions/moreinfo/civiQ.png" 
+                image="/images/solutions/civiQ.png" 
                 link="/solutions/civiq" 
                 />
                 

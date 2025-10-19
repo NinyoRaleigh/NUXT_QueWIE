@@ -14,7 +14,7 @@ defineProps<{
       </div>
       <div class="mt-16 space-y-6">
         <h1 class="font-semibold text-6xl leading-tight w-full">The QUEWIE Features: <br><span class="text-[#469AF0]">{{ text }}</span></h1>
-        <p class="w-255 text-gray-500 font-normal text-2xl leading-8">{{ description }}</p>
+        <p class=" text-gray-500 font-normal text-2xl leading-8">{{ description }}</p>
       </div>
     </section>
   <!-- </NuxtLayout> -->
