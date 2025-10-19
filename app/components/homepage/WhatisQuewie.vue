@@ -4,7 +4,7 @@ import Button from '../ui/button/Button.vue';
 </script>
 
 <template>
-    <div class=" w-full h-233 relative" style="font-family: 'Poppins', sans-serif;">
+    <div class=" w-full  h-233 relative" style="font-family: 'Poppins', sans-serif;">
         <!-- gray -->
         <div class="bg-gray-50 h-74.5 ">
             <!-- white box -->

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full pb-20">
+    <div class="w-full  h-full pb-20">
         <div class="w-full grid grid-cols-3 text-center">
             <div class="bg-[#469AF0]">
                 <div class="pl-20 py-18 font-manrope text-white"> 

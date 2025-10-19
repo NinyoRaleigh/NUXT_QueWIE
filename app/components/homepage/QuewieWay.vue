@@ -1,5 +1,5 @@
 <template>
-    <div class="h-172.5 bg-gray-50 py-20 px-21.75 shadow-[0px_8px_7.3px_1px_#00000008] font-sans">
+    <div class="h-172.5 w-full  bg-gray-50 py-20 px-21.75 shadow-[0px_8px_7.3px_1px_#00000008] font-sans">
         <div class="h-132 bg-white py-21 px-9 rounded-2xl">
             <div class=" flex items-center  justify-between  h-full">
                 <!-- left -->

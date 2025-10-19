@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="w-full h-189 pt-30 flex font-inter">
+    <div class="w-full   h-189 pt-30 flex font-inter">
         <!-- left hero section -->
         <div class="w-1/2 flex flex-col text-center items-center justify-center h-full space-y-4">
             <div class="font-bold space-y-2">
