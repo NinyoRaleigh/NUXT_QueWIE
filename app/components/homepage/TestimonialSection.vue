@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full  h-full pb-20">
+    <div class="w-full pb-20">
         <div class="w-full grid grid-cols-3 text-center">
             <div class="bg-[#469AF0]">
                 <div class="pl-20 py-18 font-manrope text-white"> 
@@ -18,7 +18,7 @@
             </div>
                
             <div>
-                <img src="/images/anya.png" class="h-full  shadow-[-30px_34px_68px_0px_#00000040]">
+                <img src="/images/anya.png" class="  shadow-[-30px_34px_68px_0px_#00000040]">
             </div>
                 
             <div class="bg-white relative">

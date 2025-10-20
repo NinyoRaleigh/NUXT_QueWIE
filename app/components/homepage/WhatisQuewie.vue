@@ -9,13 +9,13 @@ import Button from '../ui/button/Button.vue';
         <div class="bg-gray-50 h-74.5 ">
             <!-- white box -->
             <div
-                class="h-200 rounded-3xl bg-white p-12 flex justify-center absolute left-23.5 top-18.5 right-20 flex-col">
-                <div class="h-174.5  relative  text-center ">
+                class="h- rounded-3xl bg-white p-12 flex justify-center absolute left-23.5 top-18.5 right-20 flex-col">
+                <div class="h-170  relative  text-center ">
                     <!-- text -->
                     <div class="space-y-4">
-                        <h1 class="font-semibold text-5xl leading-normal">What is <span
+                        <h1 class="font-semibold text-4xl leading-normal">What is <span
                                 class="text-[#388FF0] ">QUEWIE? </span> </h1>
-                        <p class="font-normal text-2xl tracking-wide leading-relaxed text-gray-500">QUEWIE is an
+                        <p class="font-normal text-xl tracking-wide leading-relaxed text-gray-500">QUEWIE is an
                             innovative Queue Management solution designed to eliminate the hassle <br> of long and
                             disorganized lines. It empowers users to book, place orders, track, and <br> manage their
                             queue position in real time.</p>

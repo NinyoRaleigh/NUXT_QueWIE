@@ -6,7 +6,7 @@
   <NuxtLayout name="marketing-layout">
     <section class=" pt-23.5 font-sans flex flex-col items-center">
       <SolutionsMoreInfoProps 
-        title=""
+        title="CiviQ"
         text="Government Offices"
         description="<p>This system streamlines citizen services by introducing a well-organized queue management process that ensures every visitor receives timely and efficient assistance. Through digital ticketing, citizens can easily secure their service slot via kiosks, mobile apps, or online portals, eliminating the need for long physical lines.</p><p><br></p>
 
