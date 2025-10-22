@@ -11,7 +11,7 @@ defineProps<{
   <!-- <NuxtLayout name="marketing-layout"> -->
     <section class="pb-25 px-50  font-sans  ">
       <div class="pt-25.5 flex justify-center items-center">
-        <img :src="image" class="w-314.75 rounded-sm">
+        <NuxtImg :src="image" class="w-314.75 rounded-sm" />
       </div>
       <div class="mt-16 space-y-6 ">
         <h1 class="font-semibold text-4xl leading-tight w-full">{{ title }} <br><span class="text-[#469AF0]">{{ text }}</span></h1>

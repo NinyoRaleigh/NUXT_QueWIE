@@ -6,22 +6,22 @@ const isOpen = ref(false);
 <template>
     <div class="w-full flex fixed justify-center shadow-[0_4px_16.2px_2px_#0000001A] z-50 bg-white"> 
         <header class="  max-w-[1730px] w-full flex items-center justify-between
-           bg-white h-24 px-4 sm:px-6 md:px-10 z-50">
+           bg-white h-24 px-20  md:px-10 z-50">
         <!-- Logo -->
         <div class="flex items-center lg:gap-6">
                 <div>
-            <img src="/images/Quewie Logo Colored with Title 1.png" alt="Quewie Logo"
-                class="h-12 sm:h-14 md:h-16 lg:h-20 w-auto" />
+            <NuxtImg src="/images/Quewie Logo Colored with Title 1.webp" alt="Quewie Logo"
+                class="h-12 preload sm:h-14 md:h-16 lg:h-20 w-auto" />
         </div>
 
         <!-- Desktop Nav -->
-        <nav class="hidden lg:flex space-x-4 xl:space-x-15 text-black font-medium text-sm sm:text-base">
-            <NuxtLink to="/" class="hover:text-[#3691EF]">HOME</NuxtLink>
-            <NuxtLink to="/aboutus" class="hover:text-[#3691EF]">ABOUT US</NuxtLink>
-            <NuxtLink to="/features" class="hover:text-[#3691EF]">FEATURES</NuxtLink>
-            <NuxtLink to="/solutions" class="hover:text-[#3691EF]">SOLUTIONS</NuxtLink>
-            <NuxtLink to="/contactus" class="hover:text-[#3691EF]">CONTACT US</NuxtLink>
-            <NuxtLink to="/pricing" class="hover:text-[#3691EF]">PRICING</NuxtLink>
+        <nav class="hidden lg:flex space-x-4 xl:space-x-15 text-black ">
+            <NuxtLink to="/" class="font-medium text-sm sm:text-base" active-class="text-[#3691EF] underline underline-offset-2">HOME</NuxtLink>
+            <NuxtLink to="/aboutus"  activeClass="text-[#3691EF] underline underline-offset-2">ABOUT US</NuxtLink>
+            <NuxtLink to="/features" activeClass="text-[#3691EF] underline underline-offset-2">FEATURES</NuxtLink>
+            <NuxtLink to="/solutions" activeClass="text-[#3691EF] underline underline-offset-2">SOLUTIONS</NuxtLink>
+            <NuxtLink to="/contactus" activeClass="text-[#3691EF] underline underline-offset-2">CONTACT US</NuxtLink>
+            <NuxtLink to="/pricing" activeClass="text-[#3691EF] underline underline-offset-2">PRICING</NuxtLink>
         </nav>
 
         </div>

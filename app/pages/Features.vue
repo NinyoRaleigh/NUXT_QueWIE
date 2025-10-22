@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import FeaturesMain from '~/components/features/FeaturesMain.vue';
+import FeaturesMain from '~/components/feature/FeaturesMain.vue';
+
+
 
 
 

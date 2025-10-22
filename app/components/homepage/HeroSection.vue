@@ -20,9 +20,9 @@
     <!-- Right Hero Section -->
     <div class="w-full lg:w-1/2 flex justify-center lg:justify-end items-center pt-10 lg:pt-0 relative">
       <img
-        src="/images/quewie-hero.png"
+        src="/images/quewie-hero.webp"
         alt="Quewie Hero"
-        class="object-contain w-3/4 sm:w-2/3 md:w-3/5 lg:w-[500px] xl:w-[600px] 2xl:w-[700px]"
+        class="object-contain preload w-3/4 sm:w-2/3 md:w-3/5 lg:w-[500px] xl:w-[600px] 2xl:w-[700px]"
       />
     </div>
   </section>

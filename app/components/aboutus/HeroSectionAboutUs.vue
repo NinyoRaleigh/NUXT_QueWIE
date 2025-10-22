@@ -9,7 +9,7 @@ import AboutUsProps from './AboutUsProps.vue';
             <h1 class="font-semibold text-5xl leading-7">About <span class="text-[#3691EF]">Us</span></h1>
         </div>
         <div class="flex justify-center items-center pt-12">
-            <img src="/images/aboutus/AboutUsHero.png">
+            <img src="/images/aboutus/AboutUsHero.webp" alt="About Us Hero">
         </div>
 
         <div class="pt-11">

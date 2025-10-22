@@ -20,7 +20,7 @@ defineProps<{
             <div class="">
                 <div class="absolute bg-gray-50 w-124 h-105.5 rounded-2xl -top-16.5 -left-10"></div>
                 <div class=" bg-gray-50 w-124 h-75 rounded-xl top-19 left-49 absolute  "></div>
-                <img src="/images/solutions/blur.png" class="absolute top-13">
+                <img src="/images/solutions/blur.webp" class="absolute top-13">
                 <div class=" relative">
                     <img :src="image">
                 </div>

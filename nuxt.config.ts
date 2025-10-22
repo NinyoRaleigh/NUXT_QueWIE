@@ -22,6 +22,17 @@ export default defineNuxtConfig({
     componentDir: "./app/components/ui",
   },
 
+   fonts: {
+    families: [
+      // do not resolve this font with any provider from `@nuxt/fonts`
+      { name: 'Custom Font', provider: 'none' },
+      // only resolve this font with the `google` provider
+      { name: 'My Font Family', provider: 'google' },
+      // specify specific font data - this will bypass any providers
+      { name: 'Other Font', src: 'https://example.com/font.woff2', weight: 'bold' },
+    ]
+  },
+
   app: {
     head: {
       title: 'QueWIE', // default fallback title

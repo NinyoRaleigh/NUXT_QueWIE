@@ -30,7 +30,7 @@ import Button from '../ui/button/Button.vue';
                 <!-- left image -->
                 <div
                     class="relative w-full max-w-md flex items-center justify-center xl:w-120  sm:w-90 sm:h-60 lg:w-100 lg:h-80 xl:h-90 lg:max-w-lg rounded-3xl overflow-hidden">
-                    <img src="/images/Rectangle 22.png" class="w-70 h-50 sm:w-90 sm:h-60 xl:w-135 xl:h-90 rounded-3xl object-cover" />
+                    <img src="/images/Rectangle 22.webp" alt="forAdmin" class="w-70 h-50 sm:w-90 sm:h-60 xl:w-135 xl:h-90 rounded-3xl object-cover" />
                     <Button
                         class="absolute top-1/2 xl:top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full px-4 sm:px-6  xl:px-10  py-3 sm:py-6 xl:py-8 border text-white bg-transparent text-xs sm:text-sm md:text-base ">
                         For Administrator
@@ -40,7 +40,7 @@ import Button from '../ui/button/Button.vue';
                 <!-- right image -->
                 <div
                     class="relative w-full max-w-md xl:w-120 flex justify-center items-center sm:w-90 sm:h-60 lg:w-100 lg:h-80 xl:h-90 lg:max-w-lg rounded-3xl overflow-hidden">
-                    <img src="/images/rectangle23.png" class="w-70 h-50 sm:w-90 sm:h-60 xl:w-135 xl:h-90 rounded-3xl object-cover" />
+                    <img src="/images/rectangle23.webp" alt="forGuest" class="w-70 h-50 sm:w-90 sm:h-60 xl:w-135 xl:h-90 rounded-3xl object-cover" />
                     <Button
                         class="absolute top-1/2 xl:top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full px-4 sm:px-6 xl:px-10 py-3  sm:py-6 xl:py-8 bg-[#388FF0] text-white text-xs sm:text-sm md:text-base ">
                         For Guest Experience

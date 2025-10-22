@@ -7,10 +7,10 @@ import { ArrowRight } from 'lucide-vue-next';
 
 <template>
     <div class=" w-full flex justify-center bg-[#2F2F2F]">
-        <div class="w-full flex flex-col max-w-[1920px]  px-40  space-y-6 text-white font-inter justify-center ">
-            <div class="pt-10 flex ">
-                <div class="space-y-5 w-1/2 mt-5">
-                    <h1 class="font-semibold text-4xl leading-7.5">QUE<span class="text-blue-500">WIE</span></h1>
+        <div class="w-full flex flex-col max-w-[1920px] px-10 md:px-20  space-y-6 text-white font-inter justify-center text-center  lg:text-start md:justify-center ">
+            <div class="pt-10  lg:flex bg-amber-200 ">
+                <div class="space-y-2 lg:space-y-5 lg:w-1/2 mt-5 bg-red-200 ">
+                    <h1 class="font-semibold text-3xl md:text-4xl leading-7.5">QUE<span class="text-blue-500">WIE</span></h1>
                     <p class="font-medium  leading-7.5 text-gray-400bg-gray-400">Get started now try our product
                     </p>
                 </div>
@@ -25,7 +25,7 @@ import { ArrowRight } from 'lucide-vue-next';
             </div>
             <div class="flex justify-between items-end pb-10">
                 <div>
-                    <img src="/images/Logo 1.png" class="w-95">
+                    <img src="/images/Logo 1.webp" class="w-95">
                     <p class="px-2.5 font-inter font-medium leading-5">
                         Proudly supported by DOST-PCIEERD and the <br> Philippine Startup Ecosystem.
                     </p>

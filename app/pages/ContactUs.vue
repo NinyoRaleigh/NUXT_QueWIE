@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { Clock1, Facebook, Locate, Mail, MapPin, PhoneCall } from 'lucide-vue-next';
+import { Clock1, Locate, Mail, MapPin, PhoneCall } from 'lucide-vue-next';
 import { Label } from '~/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Button } from '~/components/ui/button';
+import { Textarea } from '~/components/ui/textarea';
 
 
 
@@ -22,8 +23,8 @@ import { Button } from '~/components/ui/button';
 
 
                     <div class="w-90 space-y-4">
-                        <h1 class="text-3xl font-semibold leading-none">Contact Information</h1>
-                        <p class="leading-normal text-lg text-gray-300">For inquiries, partnerships, and product
+                        <h1 class="text-3xl font-semibold leading-none">Contact In</h1>
+                        <p class="leading-normal text-lg text-gray-300">, and product
                             demonstrations, please reach out to us:</p>
                     </div>
                     <div class=" h-80 mt-21 relative">
@@ -55,9 +56,9 @@ import { Button } from '~/components/ui/button';
                         </div>
                     </div>
                     <div class="flex space-x-6 mt-9">
-                        <img src="/images/contactUs/twitter.png">
-                        <img src="/images/contactUs/Instagram.png">
-                        <img src="/images/contactUs/discord.png">
+                        <NuxtImg class="w-7.5 h-7.5" alt="Twitter" src="/images/contactUs/twitter.webp" />
+                        <NuxtImg class="w-7.5 h-7.5" alt="Instagram" src="/images/contactUs/Instagram.webp" />
+                        <NuxtImg class="w-7.5 h-7.5" alt="Discord" src="/images/contactUs/discord.webp" />
                     </div>
 
 
@@ -67,12 +68,12 @@ import { Button } from '~/components/ui/button';
                     <div class="flex space-x-9.5">
                         <!-- First Name -->
                         <div class="w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
-                            <Label for="firstname" class="leading-5">First Name</Label>
+                            <Label  class="leading-5">First Name</Label>
                             <input class="border-b-2 w-full outline-0 border-0" />
                         </div>
                         <!-- Last Name -->
                         <div class="w-69.5 flex-1  h-13.75 font-medium space-y-2">
-                            <Label for="lastname" class="leading-5 text-black ">Last Name</Label>
+                            <Label  class="leading-5 text-black ">Last Name</Label>
                             <input class="border-b-2 w-full outline-0 border-0" />
                         </div>
                     </div>
@@ -80,12 +81,12 @@ import { Button } from '~/components/ui/button';
                     <div class="flex space-x-9.5">
                         <!-- Email -->
                         <div class="w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
-                            <Label for="email" class="leading-5">Email</Label>
+                            <Label  class="leading-5">Email</Label>
                             <input class="border-b-2 w-full outline-0 border-0" />
                         </div>
                         <!-- Phone Number -->
                         <div class="w-69.5 flex-1  h-13.75 font-medium space-y-2">
-                            <Label for="lastname" class="leading-5 text-black ">Phone Number</Label>
+                            <Label  class="leading-5 text-black ">Phone Number</Label>
                             <input placeholder="+1 012 3456 789" class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
                         </div>
                     </div>
@@ -97,19 +98,19 @@ import { Button } from '~/components/ui/button';
                             <RadioGroup  class="flex">
                                 <div class="flex items-center space-x-2">
                                     <RadioGroupItem id="option-one" value="option-one" />
-                                    <Label for="general-inquiry" class="text-xs">General Inquiry</Label>
+                                    <Label  class="text-xs">General Inquiry</Label>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <RadioGroupItem id="option-two" value="option-two" />
-                                    <Label for="product-inquiry" class="text-xs">Product Inquiry</Label>
+                                    <Label class="text-xs">Product Inquiry</Label>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <RadioGroupItem id="option-three" value="option-three" />
-                                    <Label for="pricing-and-quotation" class="text-xs">Pricing and Quotation</Label>
+                                    <Label  class="text-xs">Pricing and Quotation</Label>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <RadioGroupItem id="option-four" value="option-four" />
-                                    <Label for="technical-support" class="text-xs">Technical Support</Label>
+                                    <Label class="text-xs">Technical Support</Label>
                                 </div>
                             </RadioGroup>
                         </div>
@@ -117,8 +118,8 @@ import { Button } from '~/components/ui/button';
 
                     <div>
                         <div class=" font-medium h-14">
-                            <Label for="message" class="leading-5">Message</Label>
-                            <Textarea
+                            <Label  class="leading-5">Message</Label>
+                            <textarea
                                 id="message"
                                 placeholder="Write your message.."
                                 class="w-full resize-none text-sm outline-0 border-0 border-b-2 pt-4 pl-2 flex items-center "
