@@ -6,7 +6,7 @@ import AboutUsProps from './AboutUsProps.vue';
 <template>
     <div class="w-full  pt-23 px-22.5 font-sans">
         <div class="pt-15">
-            <h1 class="font-semibold text-5xl leading-7">About <span class="text-[#3691EF]">Us</span></h1>
+            <h1 class="font-semibold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-7">About <span class="text-[#3691EF]">Us</span></h1>
         </div>
         <div class="flex justify-center items-center pt-12">
             <img src="/images/aboutus/AboutUsHero.webp" alt="About Us Hero">

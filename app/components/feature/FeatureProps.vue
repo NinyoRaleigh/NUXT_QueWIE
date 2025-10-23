@@ -7,37 +7,46 @@ defineProps<{
     image: string,
     link: string,
 }>();
-    
+
 </script>
 
+
 <template>
-    <div class="w-full flex items-center justify-center h-90  px-5 mt-35">
+    <div class="w-full flex  flex-col-reverse lg:flex lg:flex-row items-center justify-center  px-5 my-10  lg:my-15">
         <!-- left -->
-        <div class="w-1/2  h-full relative">
-            <div class="py-10">
-                <div class="absolute bg-[#388FF0] w-14 h-13.5 rounded-full top-8 -left-5"></div>
-                <div class=" bg-[#388FF0] w-6 h-5.5 rounded-full bottom-1/5 absolute left-4/5  "></div>
-                <div class="space-y-7 relative">
+        <div class=" w-3/4 lg:w-1/2 pb-10 lg:pb-0">
+            <div class="flex justify-start  relative w-full h-full">
+                <div class="absolute bg-[#388FF0] w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-13.5 rounded-full -top-2 -left-4 sm:-left-5.75 md:-left-6.5 lg:-left-5"></div>
+                <div class=" bg-[#388FF0] w-4 h-4 md:w-6 md:h-5.5 rounded-full bottom-0 absolute right-0  "></div>
+                <div class="space-y-5 relative  text-sm md:text-base  xl:text-xl">
 
-                    <h1 class="font-medium text-2xl leading-relaxed w-120"> {{ title }}<span
-                            class="text-[#388FF0]">
-                            {{ text }} </span></h1>
-                    <p class="font-normal text-xl leading-8 tracking-wide text-gray-500 w-141">{{ description }}
-                    </p>
+                    <h1 class="font-medium sm:text md:text-xl lg:text-2xl leading-relaxed  xl:w-126">{{ title }}
+                        <span class="text-[#388FF0]"> {{ text }} </span></h1>
+                    <p class=" relative leading-loose  tracking-wide text-gray-500 xl:w-140"> {{ description }} </p>
 
-                    <p class="font-normal text-xl leading-loose text-gray-500 underline underline-offset-1 hover:text-[#388FF0] transition">
-                        <NuxtLink :to="link">Learn More</NuxtLink>
-                    </p>
-
+                    <p class=" leading-loose text-gray-500 underline  underline-offset-1">
+                        <NuxtLink :to="link">Learn more</NuxtLink></p>
                 </div>
 
             </div>
         </div>
+
+
         <!-- right -->
-        <div class="w-1/2 h-full relative ">
-            <div class="w-27 h-24 bg-[#272727] rounded-3xl absolute right-117"></div>
-            <div class="w-45 h-41 bg-[#388FF0] rounded-3xl absolute right-0 bottom-0"></div>
-            <NuxtImg :src="image" class="w-136 h-82 absolute right-4 top-1/2 -translate-y-1/2" />
+        <div class="w-full lg:w-1/2 h-full mb-10 lg:pt-0 lg:pb-0 flex  items-center justify-center">
+            <div class="relative w-[65%] lg:w-[85%] max-w-[550px] aspect-[136/82] flex justify-center items-center">
+                <!-- black box -->
+                <div
+                    class="absolute bg-[#272727] rounded-lg sm:rounded-lg lg:rounded-2xl xl:rounded-3xl -left-[3%] -top-[4%] w-[20%] h-[28%]">
+                </div>
+                <!-- blue box -->
+                <div
+                    class="absolute bg-[#388FF0] rounded-lg sm:rounded-lg lg:rounded-2xl xl:rounded-3xl -right-[3%] -bottom-[4%] w-[33%] h-[50%]">
+                </div>
+                <!-- main image -->
+                <NuxtImg :src="image" alt="Features Learnmore" class="absolute inset-0 w-full h-full object-contain" />
+            </div>
         </div>
     </div>
 </template>
+

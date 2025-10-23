@@ -3,13 +3,16 @@
 </script>
 
 <template>
-    <div class="w-full pt-46 font-sans pb-50 flex justify-center" >
-        <div class="px-17.5">
-            <div class="flex flex-col justify-center items-center text-center">
-                <h1 class="font-semibold text-6xl leading-tight">We’re Here to Help</h1>
-                <p class="font-normal text-4xl leading-relaxed tracking-wide text-gray-500">Support that keeps your queues moving smoothly.</p>
-            </div>
-            <div class="mt-17 ">
+     <div class="w-full max-w-[1920px] font-sans flex justify-center pt-35 md:pt-40 lg:pt-46 xl:pt-50 pb-20 sm:pb-30 md:pb-35 lg:pb-40">
+        <div class="px-5 sm:px-10 md:px-15 lg:px-17.5 xl:px-22 text-center flex flex-col justify-center items-center space-y-5 sm:space-y-7 md:space-y-10">
+            <h1 class="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-snug">
+                We’re Here to Help
+            </h1>
+            <p class="font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed tracking-wide text-gray-500 max-w-[950px]">
+                Support that keeps your queues moving smoothly.
+            </p>
+      
+            <div class=" ">
                 <SolutionsSolutionProps 
                 title="CiviQ" 
                 text="Government Offices" 

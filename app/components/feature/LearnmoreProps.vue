@@ -8,13 +8,13 @@ defineProps<{
 
 <template>
   <!-- <NuxtLayout name="marketing-layout"> -->
-    <section class="pb-25 px-50 font-sans  ">
+    <section class="pb-25 px-10 sm:px-15 md:px-25 lg:px-35 xl:px-50 font-sans text-justify ">
       <div class="pt-25.5 flex justify-center items-center">
         <NuxtImg :src="image" class="w-full rounded-sm" />
       </div>
-      <div class="mt-16 space-y-6">
-        <h1 class="font-semibold text-4xl leading-tight w-full">The QUEWIE Features: <br><span class="text-[#469AF0]">{{ text }}</span></h1>
-        <p class=" text-gray-500 font-normal leading-8">{{ description }}</p>
+      <div class="mt-16 space-y-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <h1 class="font-semibold leading-tight w-full">The QUEWIE Features: <br><span class="text-[#469AF0]">{{ text }}</span></h1>
+        <p class=" text-gray-500 font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-8">{{ description }}</p>
       </div>
     </section>
   <!-- </NuxtLayout> -->

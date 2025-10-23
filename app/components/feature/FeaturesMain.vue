@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full pt-23 pb-22 font-sans">
-        <div class="pt-23.5 pl-30 font-semibold space-y-16">
-            <h1 class="text-6xl leading-5">Features That Redefine </h1>
-            <p class="text-8xl leading-5 text-[#469AF0]">Queue Management</p>
+    <div class="w-full  max-w-[1920px] lg:px-0 pt-10 lg:pt-23 lg:pb-22 font-sans">
+        <div class="pt-23.5 pl-10 md:pl-15 lg:pl-22 xl:pl-30 font-semibold space-y-2 sm:space-y-4 md:space-y-10 lg:space-y-16">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-5">Features That Redefine </h1>
+            <p class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-5 text-[#469AF0]">Queue Management</p>
         </div>
-        <div class=" relative mx-30 flex flex-col items-center  justify-center">
+        <div class="  relative mx-10 lg:mx-20 xl:mx-30 flex flex-col items-center mt-5 lg:mt-20 lg:pt-0 justify-center">
             <FeatureProps
                 title="The QUEWIE Features:"
                 text=" Smart Queue Management"

@@ -53,13 +53,13 @@ const isOpen = ref(false);
     <!-- Mobile & Tablet Dropdown -->
     <transition name="fade">
         <div v-if="isOpen"
-            class="lg:hidden fixed top-24 left-0 w-full bg-white shadow-lg flex flex-col items-center py-6 space-y-4 z-40">
-            <NuxtLink to="/" @click="isOpen = false" class="hover:text-[#3691EF]">HOME</NuxtLink>
-            <NuxtLink to="/aboutus" @click="isOpen = false" class="hover:text-[#3691EF]">ABOUT US</NuxtLink>
-            <NuxtLink to="/features" @click="isOpen = false" class="hover:text-[#3691EF]">FEATURES</NuxtLink>
-            <NuxtLink to="/solutions" @click="isOpen = false" class="hover:text-[#3691EF]">SOLUTIONS</NuxtLink>
-            <NuxtLink to="/contactus" @click="isOpen = false" class="hover:text-[#3691EF]">CONTACT US</NuxtLink>
-            <NuxtLink to="/pricing" @click="isOpen = false" class="hover:text-[#3691EF]">PRICING</NuxtLink>
+            class="lg:hidden fixed top-24 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-1.5 py-2.5 md:py-6 md:space-y-3 z-40 text-xs sm:text-base md:text-base ">
+            <NuxtLink to="/" @click="isOpen = false"  activeClass="text-[#3691EF] underline underline-offset-2">HOME</NuxtLink>
+            <NuxtLink to="/aboutus" @click="isOpen = false"  activeClass="text-[#3691EF] underline underline-offset-2">ABOUT US</NuxtLink>
+            <NuxtLink to="/features" @click="isOpen = false"  activeClass="text-[#3691EF] underline underline-offset-2">FEATURES</NuxtLink>
+            <NuxtLink to="/solutions" @click="isOpen = false"  activeClass="text-[#3691EF] underline underline-offset-2">SOLUTIONS</NuxtLink>
+            <NuxtLink to="/contactus" @click="isOpen = false"  activeClass="text-[#3691EF] underline underline-offset-2">CONTACT US</NuxtLink>
+            <NuxtLink to="/pricing" @click="isOpen = false"  activeClass="text-[#3691EF] underline underline-offset-2">PRICING</NuxtLink>
 
             <button class="w-11/12 bg-[#3691EF] text-white rounded-md py-2 hover:bg-blue-600" @click="isOpen = false">
                 Signup
