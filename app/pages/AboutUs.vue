@@ -6,7 +6,7 @@
 <template>
   <NuxtLayout name="marketing-layout">
     <AboutusHeroSectionAboutUs />
-    <AboutusWhatWeDo />
+    <AboutusWhoWeAre />
     
 
   </NuxtLayout>

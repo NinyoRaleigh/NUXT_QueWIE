@@ -38,7 +38,7 @@ defineProps<{
         <!-- right -->
         <div
             class="w-full lg:w-1/2 lg:text-left px-3 sm:px-5 md:px-10 lg:pl-20 py-7 flex  flex-col justify-center items-center lg:items-start">
-            <div class="space-y-1 sm:space-y-1 text-justify max-w-[640px] ">
+            <div class="space-y-1 sm:space-y-1 text-start max-w-[640px] ">
                 <h1 class="font-semibold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#3691EF]">
                     {{ title }}
                 </h1>

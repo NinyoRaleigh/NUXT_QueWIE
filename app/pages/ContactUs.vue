@@ -11,22 +11,22 @@ import { Textarea } from '~/components/ui/textarea';
 
 <template>
     <NuxtLayout name="marketing-layout">
-        <div class="scale-40 sm:scale-50 md:scale-63 lg:scale-83 xl:scale-100">
-            <div class=" lg:pt-30 xl:pt-43.5 flex  justify-center items-center px-40 pb-0 xl:pb-20">
+        <div class="  lg:scale-83 xl:scale-100">
+            <div class="py-30 lg:py-30 xl:pt-43.5 lg:pb-0 flex justify-center items-center md:px-40  xl:pb-20">
                 <div
-                    class="h-167 w-299  p-2.5 flex justify-between font-sans relative shadow-[0_0_60px_30px_#00000008] rounded-lg">
+                    class="w-90 sm:w-150 md:w-170 lg:w-299 p-2.5 lg:flex justify-center lg:justify-between font-sans relative shadow-[0_0_60px_30px_#00000008] rounded-xl text-xs sm:text-sm md:text-base">
                     <!-- left -->
                     <div
-                        class="w-123 bg-[#3691EF] rounded-t-lg rounded-bl-lg flex flex-col text-white pt-10 px-10 relative overflow-hidden">
+                        class=" w-full lg:w-123 bg-[#3691EF] rounded-t-lg rounded-bl-lg flex flex-col text-white py-5 lg:py-10 px-10 relative overflow-hidden">
                         <!-- circles -->
-                        <div class="w-67.75 h-67.75 bg-black absolute -right-22.25  -bottom-21.5 rounded-full"></div>
-                        <div class="w-34.5 h-34.5 bg-gray-600 opacity-50 absolute right-17.5 bottom-17.5 rounded-full">
+                        <div class="w-35 h-35 sm:w-67.75 sm:h-67.75 bg-black absolute sm:-right-22.25 -bottom-10 -right-10 sm:-bottom-21.5 rounded-full"></div>
+                        <div class="w-20 h-20 sm:w-34.5 sm:h-34.5 bg-gray-600 opacity-50 absolute right-10.5 bottom-10.5  sm:right-17.5 sm:bottom-17.5 rounded-full">
                         </div>
 
 
-                        <div class="w-90 space-y-4">
-                            <h1 class="text-3xl font-semibold leading-none">Contact Information</h1>
-                            <p class="leading-normal text-lg text-gray-300"> For inquiries,, and product
+                        <div class="space-y-4">
+                            <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold leading-none">Contact Information</h1>
+                            <p class="leading-normal text-sm sm:text-lg md:text-lg text-gray-300"> For inquiries, partnerships, and product
                                 demonstrations, please reach out to us:</p>
                         </div>
                         <div class=" h-80 mt-21 relative">
@@ -62,32 +62,31 @@ import { Textarea } from '~/components/ui/textarea';
                             <NuxtImg class="w-7.5 h-7.5" alt="Instagram" src="/images/contactUs/Instagram.webp" />
                             <NuxtImg class="w-7.5 h-7.5" alt="Discord" src="/images/contactUs/discord.webp" />
                         </div>
-
-
                     </div>
+
                     <!-- right -->
                     <div class=" flex-1 bg-white px-12.5 pt-15 text-gray-600 space-y-11.25">
-                        <div class="flex space-x-9.5">
+                        <div class="md:flex space-x-9.5 space-y-4">
                             <!-- First Name -->
-                            <div class="w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
+                            <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
                                 <Label class="leading-5">First Name</Label>
                                 <input class="border-b-2 w-full outline-0 border-0" />
                             </div>
                             <!-- Last Name -->
-                            <div class="w-69.5 flex-1  h-13.75 font-medium space-y-2">
+                            <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
                                 <Label class="leading-5 text-black ">Last Name</Label>
                                 <input class="border-b-2 w-full outline-0 border-0" />
                             </div>
                         </div>
 
-                        <div class="flex space-x-9.5">
+                        <div class="md:flex space-x-9.5 space-y-4">
                             <!-- Email -->
-                            <div class="w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
+                            <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
                                 <Label class="leading-5">Email</Label>
                                 <input class="border-b-2 w-full outline-0 border-0" />
                             </div>
                             <!-- Phone Number -->
-                            <div class="w-69.5 flex-1  h-13.75 font-medium space-y-2">
+                            <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
                                 <Label class="leading-5 text-black ">Phone Number</Label>
                                 <input placeholder="+1 012 3456 789"
                                     class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
@@ -97,8 +96,8 @@ import { Textarea } from '~/components/ui/textarea';
                         <!-- Select Subject -->
                         <div class="text-black space-y-5">
                             <Label class="font-semibold">Select Subject?</Label>
-                            <div class="flex ">
-                                <RadioGroup class="flex">
+                            <div class="flex">
+                                <RadioGroup class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex w-full">
                                     <div class="flex items-center space-x-2">
                                         <RadioGroupItem id="option-one" value="option-one" />
                                         <Label class="text-xs">General Inquiry</Label>

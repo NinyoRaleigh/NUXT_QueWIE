@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full  bg-gray-50 py-5 px-10 sm:py-15 sm:px-17 md:py-20 md:px-20 shadow-[0px_8px_7.3px_1px_#00000008] font-sans">
+    <div class="w-full  bg-gray-50 py-5 sm:py-15 sm:px-10 md:py-20 md:px-10 shadow-[0px_8px_7.3px_1px_#00000008] font-sans">
         <div class=" bg-white py-10 xl:py-21 lg:px-9  rounded-2xl">
             <div class=" flex flex-col-reverse  items-center lg:flex lg:flex-row  justify-between  h-full">
                 <!-- left -->
@@ -31,7 +31,7 @@
                         <div class="absolute bg-[#388FF0] rounded-lg sm:rounded-2xl xl:rounded-3xl -right-[3%] -bottom-[4%] w-[33%] h-[50%]"></div>
                         <!-- main image -->
                         <NuxtImg src="/images/Group 17.webp" alt="quewieWay"
-                            class="absolute inset-0 w-full h-full object-contain" />
+                            class="absolute inset-0 w-full h-full hover:cursor-pointer object-contain" />
                     </div>
                 </div>
 

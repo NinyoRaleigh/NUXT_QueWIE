@@ -15,7 +15,7 @@ defineProps<{
       </div>
       <div class="mt-16 space-y-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
         <h1 class="font-semibold leading-tight w-full"> {{ title }} <br><span class="text-[#469AF0]">{{ text }}</span></h1>
-        <p v-html="description" class="text-gray-500 font-normal text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed xl:leading-8"></p>
+        <div v-html="description" class="text-gray-500 font-normal text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed xl:leading-8"></div>
       </div>
     </section>
   <!-- </NuxtLayout> -->

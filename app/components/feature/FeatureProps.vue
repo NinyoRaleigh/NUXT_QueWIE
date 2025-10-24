@@ -14,15 +14,14 @@ defineProps<{
 <template>
     <div class="w-full flex  flex-col-reverse lg:flex lg:flex-row items-center justify-center  px-5 my-10  lg:my-15">
         <!-- left -->
-        <div class=" w-3/4 lg:w-1/2 pb-10 lg:pb-0">
+        <div class=" w-3/4 lg:w-1/2 pb-10 lg:pb-0 ">
             <div class="flex justify-start  relative w-full h-full">
                 <div class="absolute bg-[#388FF0] w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-13.5 rounded-full -top-2 -left-4 sm:-left-5.75 md:-left-6.5 lg:-left-5"></div>
                 <div class=" bg-[#388FF0] w-4 h-4 md:w-6 md:h-5.5 rounded-full bottom-0 absolute right-0  "></div>
-                <div class="space-y-5 relative  text-sm md:text-base  xl:text-xl">
-
-                    <h1 class="font-medium sm:text md:text-xl lg:text-2xl leading-relaxed  xl:w-126">{{ title }}
+                <div class="space-y-5 relative  text-xs  md:text-base  xl:text-xl">
+                    <h1 class="font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed  xl:w-126">{{ title }}
                         <span class="text-[#388FF0]"> {{ text }} </span></h1>
-                    <p class=" relative leading-loose  tracking-wide text-gray-500 xl:w-140"> {{ description }} </p>
+                    <p class=" relative leading-loose tracking-wide text-gray-500 w-full"> {{ description }} </p>
 
                     <p class=" leading-loose text-gray-500 underline  underline-offset-1">
                         <NuxtLink :to="link">Learn more</NuxtLink></p>
