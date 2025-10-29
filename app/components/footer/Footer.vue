@@ -2,7 +2,9 @@
 import Input from '@/components/ui/input/Input.vue';
 import { ArrowRight } from 'lucide-vue-next';
 
-
+const submitEmail = () => {
+     window.open('mailto:test@example.com')
+}
 </script>
 
 <template>
@@ -17,11 +19,12 @@ import { ArrowRight } from 'lucide-vue-next';
                     </p>
                 </div>
                 <div class="flex items-end w-full relative">
-                    <Input type="email" placeholder="Enter your email here"
+                    <Input @keyup.enter="submitEmail" type="email" placeholder="Enter your email here"
                         class="h-13 rounded-full sm:px-11.25 border-2 placeholder:text-sm sm:placeholder:text-base border-gray-400 relative" />
-                    <div class="rounded-full w-10 h-10 absolute flex right-0 bottom-1.5 mr-1.5  hover:cursor-pointer  bg-[#388FF0]">
+                        <div @click="submitEmail" class="rounded-full w-10 h-10 absolute flex right-0 bottom-1.5 mr-1.5  hover:cursor-pointer  bg-[#388FF0]">
                         <ArrowRight class="w-6 h-6 absolute left-1/2 top-1/2 -translate-1/2" />
                     </div>
+                    
 
                 </div>
             </div>

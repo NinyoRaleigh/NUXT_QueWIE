@@ -1,13 +1,54 @@
 <script setup lang="ts">
-import { Clock1, Locate, Mail, MapPin, PhoneCall } from 'lucide-vue-next';
+import { ref } from 'vue'
+import { Clock1, Mail, MapPin, PhoneCall } from 'lucide-vue-next';
 import { Label } from '~/components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Button } from '~/components/ui/button';
-import { Textarea } from '~/components/ui/textarea';
 
 
+const firstName = ref('')
+const lastName = ref('')
+const email = ref('')
+const phone = ref('')
+const subject = ref('')
+const message = ref('')
+const sending = ref(false)
+const success = ref(false)
 
+// required form
+const sendMessage = async () => {
+    if (!firstName.value || !email.value || !message.value) {
+        alert('Please fill in the required fields.')
+        return
+    }
+    // send sa server/api/send.ts
+    sending.value = true
+    try {
+        const res = await $fetch('/api/send', {
+            method: 'POST',
+            body: {
+                name: `${firstName.value} ${lastName.value}`,
+                email: email.value,
+                phone: phone.value,
+                subject: subject.value,
+                message: message.value,
+            },
+        })
+        if (res.success) {
+            success.value = true
+            alert('Message sent successfully!')
+        }
+
+            // error
+        } catch (err) {
+            console.error(err)
+            alert('Something went wrong while sending your message.')
+        } finally {
+            sending.value = false
+        }
+    }
 </script>
+
 
 <template>
     <NuxtLayout name="marketing-layout">
@@ -19,14 +60,19 @@ import { Textarea } from '~/components/ui/textarea';
                     <div
                         class=" w-full lg:w-123 bg-[#3691EF] rounded-t-lg rounded-bl-lg flex flex-col text-white py-5 lg:py-10 px-10 relative overflow-hidden">
                         <!-- circles -->
-                        <div class="w-35 h-35 sm:w-67.75 sm:h-67.75 bg-black absolute sm:-right-22.25 -bottom-10 -right-10 sm:-bottom-21.5 rounded-full"></div>
-                        <div class="w-20 h-20 sm:w-34.5 sm:h-34.5 bg-gray-600 opacity-50 absolute right-10.5 bottom-10.5  sm:right-17.5 sm:bottom-17.5 rounded-full">
+                        <div
+                            class="w-35 h-35 sm:w-67.75 sm:h-67.75 bg-black absolute sm:-right-22.25 -bottom-10 -right-10 sm:-bottom-21.5 rounded-full">
+                        </div>
+                        <div
+                            class="w-20 h-20 sm:w-34.5 sm:h-34.5 bg-gray-600 opacity-50 absolute right-10.5 bottom-10.5  sm:right-17.5 sm:bottom-17.5 rounded-full">
                         </div>
 
 
                         <div class="space-y-4">
-                            <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold leading-none">Contact Information</h1>
-                            <p class="leading-normal text-sm sm:text-lg md:text-lg text-gray-300"> For inquiries, partnerships, and product
+                            <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold leading-none">Contact Information
+                            </h1>
+                            <p class="leading-normal text-sm sm:text-lg md:text-lg text-gray-300"> For inquiries,
+                                partnerships, and product
                                 demonstrations, please reach out to us:</p>
                         </div>
                         <div class=" h-80 mt-21 relative">
@@ -37,7 +83,8 @@ import { Textarea } from '~/components/ui/textarea';
                                 </div>
                                 <div class="flex space-x-4">
                                     <Mail />
-                                    <p> supporthomi@gmail.com <br> quewie@gmail.com </p>
+                                    <p><a href="mailto:someone@example.com">supporthomi@gmail.com</a>  <br> 
+                                        <a href="mailto:someone@example.com">quewie@gmail.com </a></p>
                                 </div>
                                 <div class="flex space-x-4">
                                     <MapPin />
@@ -70,12 +117,12 @@ import { Textarea } from '~/components/ui/textarea';
                             <!-- First Name -->
                             <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
                                 <Label class="leading-5">First Name</Label>
-                                <input class="border-b-2 w-full outline-0 border-0" />
+                                <input v-model="firstName" class="border-b-2 w-full outline-0 border-0" />
                             </div>
                             <!-- Last Name -->
                             <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
                                 <Label class="leading-5 text-black ">Last Name</Label>
-                                <input class="border-b-2 w-full outline-0 border-0" />
+                                <input v-model="lastName" class="border-b-2 w-full outline-0 border-0" />
                             </div>
                         </div>
 
@@ -83,12 +130,12 @@ import { Textarea } from '~/components/ui/textarea';
                             <!-- Email -->
                             <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
                                 <Label class="leading-5">Email</Label>
-                                <input class="border-b-2 w-full outline-0 border-0" />
+                                <input v-model="email" class="border-b-2 w-full outline-0 border-0" />
                             </div>
                             <!-- Phone Number -->
                             <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
                                 <Label class="leading-5 text-black ">Phone Number</Label>
-                                <input placeholder="+1 012 3456 789"
+                                <input v-model="phone" placeholder="+1 012 3456 789"
                                     class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
                             </div>
                         </div>
@@ -97,39 +144,43 @@ import { Textarea } from '~/components/ui/textarea';
                         <div class="text-black space-y-5">
                             <Label class="font-semibold">Select Subject?</Label>
                             <div class="flex">
-                                <RadioGroup class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex w-full">
+                                <RadioGroup v-model="subject"
+                                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex w-full">
                                     <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-one" value="option-one" />
-                                        <Label class="text-xs">General Inquiry</Label>
+                                        <RadioGroupItem id="option-one" value="General Inquiry" />
+                                        <Label for="option-one" class="text-xs">General Inquiry</Label>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-two" value="option-two" />
-                                        <Label class="text-xs">Product Inquiry</Label>
+                                        <RadioGroupItem id="option-two" value="Product Inquiry" />
+                                        <Label for="option-two" class="text-xs">Product Inquiry</Label>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-three" value="option-three" />
-                                        <Label class="text-xs">Pricing and Quotation</Label>
+                                        <RadioGroupItem id="option-three" value="Pricing and Quotation" />
+                                        <Label for="option-three" class="text-xs">Pricing and Quotation</Label>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-four" value="option-four" />
-                                        <Label class="text-xs">Technical Support</Label>
+                                        <RadioGroupItem id="option-four" value="Technical Support" />
+                                        <Label for="option-four" class="text-xs">Technical Support</Label>
                                     </div>
                                 </RadioGroup>
+
                             </div>
                         </div>
 
                         <div>
                             <div class=" font-medium h-14">
                                 <Label class="leading-5">Message</Label>
-                                <textarea id="message" placeholder="Write your message.."
-                                    class="w-full resize-none text-sm outline-0 border-0 border-b-2 pt-4 pl-2 flex items-center " />
+                                <textarea v-model="message" id="message" placeholder="Write your message.."
+                                    class="w-full resize-none text-sm outline-0 border-0 border-b-2 pt-4 pl-2 flex items-center" />
+
                             </div>
                         </div>
 
                         <div class="w-full flex  justify-end ">
-                            <Button class="px-12 h-13.5 bg-black">
-                                Send Message
+                            <Button class="px-12 h-13.5 bg-black" :disabled="sending" @click="sendMessage">
+                                {{ sending ? 'Sending...' : 'Send Message' }}
                             </Button>
+
                         </div>
 
 
