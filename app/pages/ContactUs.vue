@@ -37,16 +37,30 @@ const sendMessage = async () => {
         if (res.success) {
             success.value = true
             alert('Message sent successfully!')
+            resetForm();
         }
 
-            // error
-        } catch (err) {
-            console.error(err)
-            alert('Something went wrong while sending your message.')
-        } finally {
-            sending.value = false
-        }
+
+        // error
+    } catch (err) {
+        console.error(err)
+        alert('Something went wrong while sending your message.')
+    } finally {
+        sending.value = false
     }
+}
+
+const resetForm = () => {
+    const resetForm = () => {
+        firstName.value = ''
+        lastName.value = ''
+        email.value = ''
+        phone.value = ''
+        subject.value = ''
+        message.value = ''
+    }
+
+}
 </script>
 
 
@@ -83,8 +97,9 @@ const sendMessage = async () => {
                                 </div>
                                 <div class="flex space-x-4">
                                     <Mail />
-                                    <p><a href="mailto:someone@example.com">supporthomi@gmail.com</a>  <br> 
-                                        <a href="mailto:someone@example.com">quewie@gmail.com </a></p>
+                                    <p><a href="mailto:someone@example.com">supporthomi@gmail.com</a> <br>
+                                        <a href="mailto:someone@example.com">quewie@gmail.com </a>
+                                    </p>
                                 </div>
                                 <div class="flex space-x-4">
                                     <MapPin />

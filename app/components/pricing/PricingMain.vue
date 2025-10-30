@@ -5,7 +5,7 @@
     <div class=" w-full pt-23.5 pb-20 ">
                 <div class="bg-[#3691EF] h-103"></div>
 
-        <div class="bg-white h-full w-full max-w-[1920px] flex justify-center pt-20 ">
+        <div class="bg-white  w-full max-w-[1920px] flex justify-center pt-20 ">
             <div class="-mt-100">
                 <!-- First Grid -->
                 <div class=" grid grid-cols-1 scale-105 sm:scale-100 w-70 sm:w-150 gap-5 md:w-180 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center text-center lg:w-250 xl:w-310 ">

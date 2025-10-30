@@ -48,10 +48,10 @@ const isOpen = ref(false);
                     stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                <!-- <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                </svg> -->
             </button>
         </header>
 
@@ -77,7 +77,7 @@ const isOpen = ref(false);
             <div class="w-11/12">
                 <button class="w-full bg-[#3691EF] text-white rounded-md py-2 hover:bg-blue-600"
                     @click="isOpen = false">
-                    
+                    Close
                 </button>
                 <!-- <button class="w-full border border-[#3691EF] text-[#3691EF] rounded-md py-2 hover:bg-[#3691EF] hover:text-white"
                     @click="isOpen = false">

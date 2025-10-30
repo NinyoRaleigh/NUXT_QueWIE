@@ -38,9 +38,9 @@ const submitEmail = () => {
                     </div>
                     <div class=" space-y-2 font-medium leading-7.5">
                         <div class="flex space-x-2.5 items-center justify-end">
-                            <p> Terms and Condtions </p>
+                            <p><a href="#"> Terms and Condtions</a>  </p>
                             <div class="rounded-full w-1 h-1 bg-gray-400"></div>
-                            <p> Privacy Policy </p>
+                            <p><a href="#">  Privacy Policy</a> </p>
                         </div>
                         <div>
                             <p>© 2025 LinkNeX Solution. Copyright and rights reserved</p>
