@@ -36,7 +36,7 @@ defineProps<{
 
         <!-- Subscribe Button -->
         <div class="px-14 w-full absolute bottom-0 pb-5">
-        <NuxtLink :to="subscribe">
+        <NuxtLink to="/contactus">
             <Button class="w-full hover:cursor-pointer text-white rounded-none" :style="{ backgroundColor: color }">
                 Subscribe Now!
             </Button>

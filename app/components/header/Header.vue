@@ -4,7 +4,7 @@ const isOpen = ref(false);
 </script>
 
 <template>
-    <div class="w-full flex fixed justify-center shadow-[0_4px_16.2px_2px_#0000001A] z-50 bg-white">
+    <div class="w-full flex fixed -top-1 justify-center shadow-[0_4px_16.2px_2px_#0000001A] z-50 bg-white">
         <header class="  max-w-[1730px] w-full flex items-center justify-between
            bg-white h-24 px-10 sm:px-20  md:px-10 z-50">
             <!-- Logo -->
@@ -33,7 +33,7 @@ const isOpen = ref(false);
 
             </div>
 
-            <!-- Desktop Buttons -->
+            <!-- Desktop Buttons Ilisanan -->
             <div class="hidden lg:flex xl:space-x-3 items-center">
                 <!-- <Button variant="ghost" class="font-normal text-sm sm:text-base">Login</Button>
                 <Button
@@ -42,12 +42,13 @@ const isOpen = ref(false);
                 </Button> -->
             </div>
 
-            <!-- Burger Menu (Mobile & Tablet) -->
+            <!-- Burger Menu Mobile  -->
             <button class="lg:hidden text-3xl focus:outline-none" @click="isOpen = !isOpen">
                 <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
+                <!-- x button -->
                 <!-- <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -57,7 +58,7 @@ const isOpen = ref(false);
 
     </div>
 
-    <!-- Mobile & Tablet Dropdown -->
+    <!-- Mobile Dropdown -->
     <transition name="fade">
         <div v-if="isOpen"
             class="lg:hidden fixed top-24 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-1.5 py-2.5 md:py-6 md:space-y-3 z-40 text-xs sm:text-base md:text-base ">
