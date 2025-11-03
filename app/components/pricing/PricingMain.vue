@@ -3,7 +3,7 @@
 <template> 
 <div>
     <div class=" w-full pt-23.5 pb-20 ">
-                <div class="bg-[#3691EF] h-103"></div>
+                <div class="bg-primary h-103"></div>
 
         <div class="bg-white  w-full max-w-[1920px] flex justify-center pt-20 ">
             <div class="-mt-100">

@@ -9,7 +9,7 @@
       <div class="font-bold space-y-2 sm:space-y-3">
         <h2 class="text-3xl sm:text-5xl lg:text-4xl xl:text-5xl leading-tight">REIMAGINE QUEUEING</h2>
         <h1 class="text-4xl sm:text-6xl lg:text-5xl xl:text-7xl font-bold">
-          WITH <span class="text-[#388FF0] font-extrabold">QUEWIE</span>
+          WITH <span class="text-quewie font-extrabold">QUEWIE</span>
         </h1>
       </div>
       <p class="font-light text-lg sm:text-2xl lg:text-xl xl:text-3xl leading-tight sm:leading-snug text-gray-700">
@@ -19,10 +19,10 @@
 
     <!-- Right Hero Section -->
     <div class="w-full lg:w-1/2 flex justify-center lg:justify-end items-center pt-10 lg:pt-0 relative">
-      <img
+      <NuxtImg
         src="/images/quewie-hero.webp"
         alt="Quewie Hero"
-        class="object-contain preload w-3/4 sm:w-2/3 md:w-3/5 lg:w-[500px] xl:w-[600px] 2xl:w-[700px]"
+        class="object-contain preload w-3/4 sm:w-2/3 md:w-3/5 lg:w-125 xl:w-150 2xl:w-175"
       />
     </div>
   </section>

@@ -21,17 +21,18 @@ const submitEmail = () => {
                 <div class="flex items-end w-full relative">
                     <Input @keyup.enter="submitEmail" type="email" placeholder="Enter your email here"
                         class="h-13 rounded-full sm:px-11.25 border-2 placeholder:text-sm sm:placeholder:text-base border-gray-400 relative" />
-                        <div @click="submitEmail" class="rounded-full w-10 h-10 absolute flex right-0 bottom-1.5 mr-1.5  hover:cursor-pointer  bg-[#388FF0]">
+                        <div @click="submitEmail" class="rounded-full w-10 h-10 absolute flex right-0 bottom-1.5 mr-1.5  hover:cursor-pointer  bg-quewie">
                         <ArrowRight class="w-6 h-6 absolute left-1/2 top-1/2 -translate-1/2" />
                     </div>
                     
 
                 </div>
             </div>
+            <!-- For Large Screen -->
             <div class="lg:block hidden">
                 <div class="flex justify-between items-end pb-10">
                     <div >
-                        <img src="/images/Logo 1.webp" class="w-95 hover:cursor-pointer">
+                        <NuxtImg src="/images/Logo 1.webp" class="w-95 hover:cursor-pointer" />
                         <p class="px-2.5 font-inter font-medium leading-5">
                             Proudly supported by DOST-PCIEERD and the <br> Philippine Startup Ecosystem.
                         </p>
@@ -48,7 +49,7 @@ const submitEmail = () => {
                     </div>
                 </div>
             </div>
-
+            <!-- For Small Screen -->
             <div class="lg:hidden block text-xs ">
                 <div class="flex justify-center items-end pb-10 ">
                     <div class="flex flex-col justify-center items-center space-y-4">

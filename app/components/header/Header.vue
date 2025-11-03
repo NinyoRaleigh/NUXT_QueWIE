@@ -19,27 +19,26 @@ const isOpen = ref(false);
                 <!-- Desktop Nav -->
                 <nav class="hidden lg:flex space-x-4 xl:space-x-15 text-black ">
                     <NuxtLink to="/" class="font-medium text-sm sm:text-base"
-                        active-class="text-[#3691EF] underline underline-offset-2">HOME</NuxtLink>
-                    <NuxtLink to="/aboutus" activeClass="text-[#3691EF] underline underline-offset-2">ABOUT US
+                        active-class="text-primary underline underline-offset-2">HOME</NuxtLink>
+                    <NuxtLink to="/aboutus" activeClass="text-primary underline underline-offset-2">ABOUT US
                     </NuxtLink>
-                    <NuxtLink to="/features" activeClass="text-[#3691EF] underline underline-offset-2">FEATURES
+                    <NuxtLink to="/features" activeClass="text-primary underline underline-offset-2">FEATURES
                     </NuxtLink>
-                    <NuxtLink to="/solutions" activeClass="text-[#3691EF] underline underline-offset-2">SOLUTIONS
+                    <NuxtLink to="/solutions" activeClass="text-primary underline underline-offset-2">SOLUTIONS
                     </NuxtLink>
-                    <NuxtLink to="/contactus" activeClass="text-[#3691EF] underline underline-offset-2">CONTACT US
+                    <NuxtLink to="/contactus" activeClass="text-primary underline underline-offset-2">CONTACT US
                     </NuxtLink>
-                    <NuxtLink to="/pricing" activeClass="text-[#3691EF] underline underline-offset-2">PRICING</NuxtLink>
+                    <NuxtLink to="/pricing" activeClass="text-primary underline underline-offset-2">PRICING</NuxtLink>
                 </nav>
 
             </div>
 
             <!-- Desktop Buttons Ilisanan -->
             <div class="hidden lg:flex xl:space-x-3 items-center">
-                <!-- <Button variant="ghost" class="font-normal text-sm sm:text-base">Login</Button>
                 <Button
-                    class="bg-[#3691EF] text-white rounded-md px-4 py-1 hover:bg-blue-600 font-normal text-sm sm:text-base">
-                    Signup
-                </Button> -->
+                    class="bg-primary text-white rounded-md px-4 py-1 hover:bg-blue-600 font-normal text-sm sm:text-base">
+                    Request Demo
+                </Button>
             </div>
 
             <!-- Burger Menu Mobile  -->
@@ -48,11 +47,11 @@ const isOpen = ref(false);
                     stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <!-- x button -->
-                <!-- <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                <!-- x button -->
+                <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg> -->
+                </svg>
             </button>
         </header>
 
@@ -61,26 +60,25 @@ const isOpen = ref(false);
     <!-- Mobile Dropdown -->
     <transition name="fade">
         <div v-if="isOpen"
-            class="lg:hidden fixed top-24 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-1.5 py-2.5 md:py-6 md:space-y-3 z-40 text-xs sm:text-base md:text-base ">
-            <NuxtLink to="/" @click="isOpen = false" activeClass="text-[#3691EF] underline underline-offset-2">HOME
+            class="lg:hidden fixed top-23 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-1.5 py-2.5 md:py-6 md:space-y-3 z-40 text-xs sm:text-base md:text-base ">
+            <NuxtLink to="/" @click="isOpen = false" activeClass="text-primary underline underline-offset-2">HOME
             </NuxtLink>
-            <NuxtLink to="/aboutus" @click="isOpen = false" activeClass="text-[#3691EF] underline underline-offset-2">
+            <NuxtLink to="/aboutus" @click="isOpen = false" activeClass="text-primary underline underline-offset-2">
                 ABOUT US</NuxtLink>
-            <NuxtLink to="/features" @click="isOpen = false" activeClass="text-[#3691EF] underline underline-offset-2">
+            <NuxtLink to="/features" @click="isOpen = false" activeClass="text-primary underline underline-offset-2">
                 FEATURES</NuxtLink>
-            <NuxtLink to="/solutions" @click="isOpen = false" activeClass="text-[#3691EF] underline underline-offset-2">
+            <NuxtLink to="/solutions" @click="isOpen = false" activeClass="text-primary underline underline-offset-2">
                 SOLUTIONS</NuxtLink>
-            <NuxtLink to="/contactus" @click="isOpen = false" activeClass="text-[#3691EF] underline underline-offset-2">
+            <NuxtLink to="/contactus" @click="isOpen = false" activeClass="text-primary underline underline-offset-2">
                 CONTACT US</NuxtLink>
-            <NuxtLink to="/pricing" @click="isOpen = false" activeClass="text-[#3691EF] underline underline-offset-2">
+            <NuxtLink to="/pricing" @click="isOpen = false" activeClass="text-primary underline underline-offset-2">
                 PRICING</NuxtLink>
 
             <div class="w-11/12">
-                <button class="w-full bg-[#3691EF] text-white rounded-md py-2 hover:bg-blue-600"
-                    @click="isOpen = false">
-                    Close
+                <button class="w-full bg-primary text-white rounded-md py-2 hover:bg-blue-600">
+                    Request Demo
                 </button>
-                <!-- <button class="w-full border border-[#3691EF] text-[#3691EF] rounded-md py-2 hover:bg-[#3691EF] hover:text-white"
+                <!-- <button class="w-full border border-primary text-primary rounded-md py-2 hover:bg-primary hover:text-white"
                     @click="isOpen = false">
                     Login
                 </button> -->

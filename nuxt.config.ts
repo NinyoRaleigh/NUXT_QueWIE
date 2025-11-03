@@ -35,12 +35,12 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'QueWIE', // default fallback title
+      title: 'QUEWIE', // default fallback title
       htmlAttrs: {
         lang: 'en',
       },
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icon', href: '/images/QUEWIELOGO.webp' },
       ],
     },
   },

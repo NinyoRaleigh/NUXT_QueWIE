@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     const data = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'QUEWIE <onboarding@resend.dev>',
       to: ['ninoraleighparagas@gmail.com'],
       subject: `New message from ${body.name}`,
       html: `
@@ -18,7 +18,8 @@ export default defineEventHandler(async (event) => {
         <p><strong>Message:</strong></p>
         <p>${body.message}</p>
       `,
-    })
+    });
+    console.log('email sent', data);
     return { success: true, data }
   } catch (error) {
     return { success: false, error };

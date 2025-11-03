@@ -10,15 +10,15 @@ const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const phone = ref('')
-const subject = ref('')
+const subject = ref('General Inquiry')
 const message = ref('')
 const sending = ref(false)
 const success = ref(false)
+const sent = ref('')
 
 // required form
 const sendMessage = async () => {
     if (!firstName.value || !email.value || !message.value) {
-        alert('Please fill in the required fields.')
         return
     }
     // send sa server/api/send.ts
@@ -36,7 +36,7 @@ const sendMessage = async () => {
         })
         if (res.success) {
             success.value = true
-            alert('Message sent successfully!')
+            sent.value = 'Message sent successfully!'
             resetForm();
         }
 
@@ -68,11 +68,20 @@ const resetForm = () => {
     <NuxtLayout name="marketing-layout">
         <div class="  lg:scale-83 xl:scale-100">
             <div class="py-30 lg:py-30 xl:pt-43.5 lg:pb-0 flex justify-center items-center md:px-40  xl:pb-20">
+            <div v-show="" class="absolute top-1/2 -translate-y-1/2 w-100 h-35 text-white bg-gray-50 flex flex-col space-y-4 overflow-hidden rounded-lg items-center z-50">
+                <div class="bg-blue-500 w-full h-10 flex justify-center items-center"> 
+                    <Mail/>
+                </div>
+                <div class="flex flex-col text-center text-green-400 space-y-2 items-center justify-center ">
+                    <h1 class="font-semibold text-xl">Success</h1>
+                    <p>Your Message has been sent!</p>
+                </div>
+            </div>
                 <div
                     class="w-90 sm:w-150 md:w-170 lg:w-299 p-2.5 lg:flex justify-center lg:justify-between font-sans relative shadow-[0_0_60px_30px_#00000008] rounded-xl text-xs sm:text-sm md:text-base">
                     <!-- left -->
                     <div
-                        class=" w-full lg:w-123 bg-[#3691EF] rounded-t-lg rounded-bl-lg flex flex-col text-white py-5 lg:py-10 px-10 relative overflow-hidden">
+                        class=" w-full lg:w-123 bg-primary rounded-t-lg rounded-bl-lg flex flex-col text-white py-5 lg:py-10 px-10 relative overflow-hidden">
                         <!-- circles -->
                         <div
                             class="w-35 h-35 sm:w-67.75 sm:h-67.75 bg-black absolute sm:-right-22.25 -bottom-10 -right-10 sm:-bottom-21.5 rounded-full">
@@ -127,79 +136,81 @@ const resetForm = () => {
                     </div>
 
                     <!-- right -->
-                    <div class=" flex-1 bg-white px-12.5 pt-15 text-gray-600 space-y-11.25">
-                        <div class="md:flex space-x-9.5 space-y-4">
-                            <!-- First Name -->
-                            <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
-                                <Label class="leading-5">First Name</Label>
-                                <input v-model="firstName" class="border-b-2 w-full outline-0 border-0" />
+                    <form action="/api/send" method="POST">
+                        <div class=" flex-1 bg-white px-12.5 pt-15 text-gray-600 space-y-11.25">
+                            <div class="md:flex space-x-9.5 space-y-4">
+                                <!-- First Name -->
+                                <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
+                                    <Label class="leading-5">First Name</Label>
+                                    <input v-model="firstName" required class="border-b-2 w-full outline-0 border-0" />
+                                </div>
+                                <!-- Last Name -->
+                                <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
+                                    <Label class="leading-5 text-black ">Last Name</Label>
+                                    <input v-model="lastName" required class="border-b-2 w-full outline-0 border-0" />
+                                </div>
                             </div>
-                            <!-- Last Name -->
-                            <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
-                                <Label class="leading-5 text-black ">Last Name</Label>
-                                <input v-model="lastName" class="border-b-2 w-full outline-0 border-0" />
+
+                            <div class="md:flex space-x-9.5 space-y-4">
+                                <!-- Email -->
+                                <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
+                                    <Label class="leading-5">Email</Label>
+                                    <input v-model="email" required type="email" class="border-b-2 w-full outline-0 border-0" />
+                                </div>
+                                <!-- Phone Number -->
+                                <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
+                                    <Label class="leading-5 text-black ">Phone Number</Label>
+                                    <input v-model="phone" placeholder=""
+                                        class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
+                                </div>
                             </div>
+
+                            <!-- Select Subject -->
+                            <div class="text-black space-y-5">
+                                <Label class="font-semibold">Select Subject?</Label>
+                                <div class="flex">
+                                    <RadioGroup v-model="subject"
+                                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex w-full">
+                                        <div class="flex items-center space-x-2">
+                                            <RadioGroupItem id="option-one" default-value="General Inquiry" />
+                                            <Label for="option-one" class="text-xs">General Inquiry</Label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <RadioGroupItem id="option-two" value="Product Inquiry" />
+                                            <Label for="option-two" class="text-xs">Product Inquiry</Label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <RadioGroupItem id="option-three" value="Pricing and Quotation" />
+                                            <Label for="option-three" class="text-xs">Pricing and Quotation</Label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <RadioGroupItem id="option-four" value="Technical Support" />
+                                            <Label for="option-four" class="text-xs">Technical Support</Label>
+                                        </div>
+                                    </RadioGroup>
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class=" font-medium h-14">
+                                    <Label class="leading-5">Message</Label>
+                                    <textarea v-model="message" id="message" placeholder="Write your message.."
+                                        class="w-full resize-none text-sm outline-0 border-0 border-b-2 pt-4 pl-2 flex items-center" />
+
+                                </div>
+                            </div>
+
+                            <div class="w-full flex  justify-end ">
+                                <Button class="px-12 h-13.5 bg-black" :disabled="sending" @click="sendMessage">
+                                    {{ sending ? 'Sending...' : 'Send Message' }}
+                                </Button>
+
+                            </div>
+
+
                         </div>
-
-                        <div class="md:flex space-x-9.5 space-y-4">
-                            <!-- Email -->
-                            <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
-                                <Label class="leading-5">Email</Label>
-                                <input v-model="email" class="border-b-2 w-full outline-0 border-0" />
-                            </div>
-                            <!-- Phone Number -->
-                            <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
-                                <Label class="leading-5 text-black ">Phone Number</Label>
-                                <input v-model="phone" placeholder="+1 012 3456 789"
-                                    class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
-                            </div>
-                        </div>
-
-                        <!-- Select Subject -->
-                        <div class="text-black space-y-5">
-                            <Label class="font-semibold">Select Subject?</Label>
-                            <div class="flex">
-                                <RadioGroup v-model="subject"
-                                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex w-full">
-                                    <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-one" value="General Inquiry" />
-                                        <Label for="option-one" class="text-xs">General Inquiry</Label>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-two" value="Product Inquiry" />
-                                        <Label for="option-two" class="text-xs">Product Inquiry</Label>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-three" value="Pricing and Quotation" />
-                                        <Label for="option-three" class="text-xs">Pricing and Quotation</Label>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <RadioGroupItem id="option-four" value="Technical Support" />
-                                        <Label for="option-four" class="text-xs">Technical Support</Label>
-                                    </div>
-                                </RadioGroup>
-
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class=" font-medium h-14">
-                                <Label class="leading-5">Message</Label>
-                                <textarea v-model="message" id="message" placeholder="Write your message.."
-                                    class="w-full resize-none text-sm outline-0 border-0 border-b-2 pt-4 pl-2 flex items-center" />
-
-                            </div>
-                        </div>
-
-                        <div class="w-full flex  justify-end ">
-                            <Button class="px-12 h-13.5 bg-black" :disabled="sending" @click="sendMessage">
-                                {{ sending ? 'Sending...' : 'Send Message' }}
-                            </Button>
-
-                        </div>
-
-
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

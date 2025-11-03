@@ -26,11 +26,11 @@ defineProps<{
                 </div>
 
                 <!-- blur -->
-                <img src="/images/solutions/blur.webp" class="absolute top-[13%] w-full h-auto" />
+                <NuxtImg src="/images/solutions/blur.webp" class="absolute top-[13%] w-full h-auto" />
 
                 <!-- main image -->
                 <div class="relative w-full h-full flex justify-center items-center">
-                    <img :src="image" alt="Solution Image" class="w-full h-full object-contain" />
+                    <NuxtImg :src="image" alt="Solution Image" class="w-full h-full object-contain" />
                 </div>
             </div>
         </div>
@@ -38,8 +38,8 @@ defineProps<{
         <!-- right -->
         <div
             class="w-full lg:w-1/2 lg:text-left px-3 sm:px-5 md:px-10 lg:pl-20 py-7 flex  flex-col justify-center items-center lg:items-start">
-            <div class="space-y-1 sm:space-y-1 text-start max-w-[640px] ">
-                <h1 class="font-semibold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#3691EF]">
+            <div class="space-y-1 sm:space-y-1 text-start max-w-2xl ">
+                <h1 class="font-semibold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-primary">
                     {{ title }}
                 </h1>
                 <h2 class="font-semibold text-xl sm:text-2xl lg:text-3xl  leading-tight">
