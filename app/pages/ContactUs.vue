@@ -132,9 +132,9 @@ const resetForm = () => {
                             </div>
                         </div>
                         <div class="flex space-x-6 mt-9">
-                            <NuxtImg class="w-7.5 h-7.5" alt="Twitter" src="/images/contactUs/twitter.webp" />
-                            <NuxtImg class="w-7.5 h-7.5" alt="Instagram" src="/images/contactUs/Instagram.webp" />
-                            <NuxtImg class="w-7.5 h-7.5" alt="Discord" src="/images/contactUs/discord.webp" />
+                            <a href=""> <NuxtImg class="w-7.5 h-7.5" alt="Twitter" src="/images/contactUs/twitter.webp" /> </a>
+                            <a href=""> <NuxtImg class="w-7.5 h-7.5" alt="Instagram" src="/images/contactUs/Instagram.webp" /> </a>
+                            <a href=""> <NuxtImg class="w-7.5 h-7.5" alt="Discord" src="/images/contactUs/discord.webp" /> </a>
                         </div>
                     </div>
 

@@ -64,7 +64,7 @@ const submitEmail = () => {
                             <p> Privacy Policy </p>
                         </div>
                         <div>
-                            <p>© 2025 LinkNeX Solution. Copyright and rights reserved</p>
+                            <p>© {{new Date().getFullYear() }} LinkNeX Solution. Copyright and rights reserved</p>
                         </div>
                     </div>
                 </div>

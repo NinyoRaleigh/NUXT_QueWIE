@@ -2,8 +2,7 @@
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
-  devtools: { enabled: false },
-
+  devtools: { enabled: true },
 
   modules: [
     "@nuxt/eslint",
@@ -12,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/test-utils",
     "shadcn-nuxt",
+    '@nuxtjs/sitemap',
   ],
   css: ["~/assets/css/tailwind.css"],
   vite: {
@@ -44,4 +44,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+  
+  site: { 
+ url: 'http://localhost:3000', 
+ name: 'QUEWIE' 
+ }, 
+
 });
