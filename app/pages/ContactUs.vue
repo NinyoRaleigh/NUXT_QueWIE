@@ -38,6 +38,11 @@ const sendMessage = async () => {
             success.value = true
             sent.value = 'Message sent successfully!'
             resetForm();
+
+            setTimeout(() => {
+                success.value = false
+                sent.value = ''
+            }, 3000)
         }
 
 
@@ -51,15 +56,12 @@ const sendMessage = async () => {
 }
 
 const resetForm = () => {
-    const resetForm = () => {
         firstName.value = ''
         lastName.value = ''
         email.value = ''
         phone.value = ''
         subject.value = ''
         message.value = ''
-    }
-
 }
 </script>
 
@@ -68,13 +70,13 @@ const resetForm = () => {
     <NuxtLayout name="marketing-layout">
         <div class="  lg:scale-83 xl:scale-100">
             <div class="py-30 lg:py-30 xl:pt-43.5 lg:pb-0 flex justify-center items-center md:px-40  xl:pb-20">
-            <div v-show="" class="absolute top-1/2 -translate-y-1/2 w-100 h-35 text-white bg-gray-50 flex flex-col space-y-4 overflow-hidden rounded-lg items-center z-50">
+            <div v-show="success" class="absolute top-1/2 -translate-y-1/2 w-100 h-35 text-white bg-gray-50 flex flex-col space-y-4 overflow-hidden rounded-lg items-center z-50">
                 <div class="bg-blue-500 w-full h-10 flex justify-center items-center"> 
                     <Mail/>
                 </div>
                 <div class="flex flex-col text-center text-green-400 space-y-2 items-center justify-center ">
                     <h1 class="font-semibold text-xl">Success</h1>
-                    <p>Your Message has been sent!</p>
+                    <p>{{ sent }}</p>
                 </div>
             </div>
                 <div
@@ -104,10 +106,11 @@ const resetForm = () => {
                                     <PhoneCall />
                                     <p> +1012 3456 789 </p>
                                 </div>
-                                <div class="flex space-x-4">
+                                <div class="flex space-x-4" >
                                     <Mail />
-                                    <p><a href="mailto:someone@example.com">supporthomi@gmail.com</a> <br>
-                                        <a href="mailto:someone@example.com">quewie@gmail.com </a>
+                                    <p>
+                                        <a href="mailto:someone@example.com"  class="hover:underline">supporthomi@gmail.com</a> <br>
+                                        <a href="mailto:someone@example.com"  class="hover:underline">quewie@gmail.com </a>
                                     </p>
                                 </div>
                                 <div class="flex space-x-4">
@@ -120,7 +123,7 @@ const resetForm = () => {
                                         stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook">
                                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                                     </svg>
-                                    <p> facebook.com/QUEWIE </p>
+                                    <a href="https://www.facebook.com/p/Quewie-61578924791980" class="hover:underline"> facebook.com/QUEWIE </a>
                                 </div>
                                 <div class="flex space-x-4">
                                     <Clock1 />
@@ -136,7 +139,7 @@ const resetForm = () => {
                     </div>
 
                     <!-- right -->
-                    <form action="/api/send" method="POST">
+                    <form @submit.prevent="sendMessage" action="/api/send" method="POST">
                         <div class=" flex-1 bg-white px-12.5 pt-15 text-gray-600 space-y-11.25">
                             <div class="md:flex space-x-9.5 space-y-4">
                                 <!-- First Name -->
@@ -160,8 +163,7 @@ const resetForm = () => {
                                 <!-- Phone Number -->
                                 <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
                                     <Label class="leading-5 text-black ">Phone Number</Label>
-                                    <input v-model="phone" placeholder=""
-                                        class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
+                                    <input type="tel" v-model="phone" @input="phone = phone.replace(/\D/g,'')" pattern="09[0-9]{9}" title="Enter a valid PH number starting with 09" placeholder="" class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
                                 </div>
                             </div>
 
@@ -195,14 +197,14 @@ const resetForm = () => {
                             <div>
                                 <div class=" font-medium h-14">
                                     <Label class="leading-5">Message</Label>
-                                    <textarea v-model="message" id="message" placeholder="Write your message.."
+                                    <textarea required v-model="message" id="message" placeholder="Write your message.."
                                         class="w-full resize-none text-sm outline-0 border-0 border-b-2 pt-4 pl-2 flex items-center" />
 
                                 </div>
                             </div>
 
                             <div class="w-full flex  justify-end ">
-                                <Button class="px-12 h-13.5 bg-black" :disabled="sending" @click="sendMessage">
+                                <Button class="px-12 h-13.5 bg-black" :disabled="sending" type="submit">
                                     {{ sending ? 'Sending...' : 'Send Message' }}
                                 </Button>
 

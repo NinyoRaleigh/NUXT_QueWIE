@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <!-- <NuxtLayout name="marketing-layout"> -->
     <section class="pb-25 px-10 sm:px-15 md:px-25 lg:px-35 xl:px-50 font-sans text-justify ">
-      <div class="pt-25.5 flex justify-center items-center">
+      <div class=" pt-10 sm:pt-15 lg:pt-20 flex justify-center items-center">
         <NuxtImg :src="image" class="w-full rounded-sm" />
       </div>
       <div class="mt-16 space-y-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
