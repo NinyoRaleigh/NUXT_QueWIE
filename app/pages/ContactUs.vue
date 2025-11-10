@@ -18,9 +18,9 @@ const sent = ref('')
 
 // required form
 const sendMessage = async () => {
-    if (!firstName.value || !email.value || !message.value) {
-        return
-    }
+    // if (!firstName.value || !email.value || !message.value) {
+    //     return
+    // }
     // send sa server/api/send.ts
     sending.value = true
     try {
@@ -56,12 +56,12 @@ const sendMessage = async () => {
 }
 
 const resetForm = () => {
-        firstName.value = ''
-        lastName.value = ''
-        email.value = ''
-        phone.value = ''
-        subject.value = ''
-        message.value = ''
+    firstName.value = ''
+    lastName.value = ''
+    email.value = ''
+    phone.value = ''
+    subject.value = ''
+    message.value = ''
 }
 </script>
 
@@ -70,15 +70,17 @@ const resetForm = () => {
     <NuxtLayout name="marketing-layout">
         <div class="  lg:scale-83 xl:scale-100">
             <div class="py-30 lg:py-30 xl:pt-43.5 lg:pb-0 flex justify-center items-center md:px-40  xl:pb-20">
-            <div v-show="success" class="absolute top-1/2 -translate-y-1/2 w-100 h-35 text-white bg-gray-50 flex flex-col space-y-4 overflow-hidden rounded-lg items-center z-50">
-                <div class="bg-blue-500 w-full h-10 flex justify-center items-center"> 
-                    <Mail/>
-                </div>
-                <div class="flex flex-col text-center text-green-400 space-y-2 items-center justify-center ">
-                    <h1 class="font-semibold text-xl">Success</h1>
-                    <p>{{ sent }}</p>
-                </div>
-            </div>
+                <transition name="toast">
+                    <div v-show="success" class="fixed top-5 left-1/2 -translate-x-1/2 w-11/12 max-w-sm bg-white shadow-lg rounded-lg flex flex-col overflow-hidden z-50">
+                        <div class="bg-blue-500 w-full h-10 flex justify-center items-center text-white">
+                            <Mail />
+                        </div>
+                        <div class="p-3 flex flex-col text-center text-green-500 space-y-1">
+                            <h1 class="font-semibold text-lg">Success</h1>
+                            <p class="text-sm">{{ sent }}</p>
+                        </div>
+                    </div>
+                </transition>
                 <div
                     class="w-90 sm:w-150 md:w-170 lg:w-299 p-2.5 lg:flex justify-center lg:justify-between font-sans relative shadow-[0_0_60px_30px_#00000008] rounded-xl text-xs sm:text-sm md:text-base">
                     <!-- left -->
@@ -106,11 +108,13 @@ const resetForm = () => {
                                     <PhoneCall />
                                     <p> +1012 3456 789 </p>
                                 </div>
-                                <div class="flex space-x-4" >
+                                <div class="flex space-x-4">
                                     <Mail />
                                     <p>
-                                        <a href="mailto:someone@example.com"  class="hover:underline">supporthomi@gmail.com</a> <br>
-                                        <a href="mailto:someone@example.com"  class="hover:underline">quewie@gmail.com </a>
+                                        <a href="mailto:someone@example.com"
+                                            class="hover:underline">supporthomi@gmail.com</a> <br>
+                                        <a href="mailto:someone@example.com" class="hover:underline">quewie@gmail.com
+                                        </a>
                                     </p>
                                 </div>
                                 <div class="flex space-x-4">
@@ -123,7 +127,8 @@ const resetForm = () => {
                                         stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook">
                                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                                     </svg>
-                                    <a href="https://www.facebook.com/p/Quewie-61578924791980" class="hover:underline"> facebook.com/QUEWIE </a>
+                                    <a href="https://www.facebook.com/p/Quewie-61578924791980" class="hover:underline">
+                                        facebook.com/QUEWIE </a>
                                 </div>
                                 <div class="flex space-x-4">
                                     <Clock1 />
@@ -132,9 +137,15 @@ const resetForm = () => {
                             </div>
                         </div>
                         <div class="flex space-x-6 mt-9">
-                            <a href=""> <NuxtImg class="w-7.5 h-7.5" alt="Twitter" src="/images/contactUs/twitter.webp" /> </a>
-                            <a href=""> <NuxtImg class="w-7.5 h-7.5" alt="Instagram" src="/images/contactUs/Instagram.webp" /> </a>
-                            <a href=""> <NuxtImg class="w-7.5 h-7.5" alt="Discord" src="/images/contactUs/discord.webp" /> </a>
+                            <a href="">
+                                <NuxtImg class="w-7.5 h-7.5" alt="Twitter" src="/images/contactUs/twitter.webp" />
+                            </a>
+                            <a href="">
+                                <NuxtImg class="w-7.5 h-7.5" alt="Instagram" src="/images/contactUs/Instagram.webp" />
+                            </a>
+                            <a href="">
+                                <NuxtImg class="w-7.5 h-7.5" alt="Discord" src="/images/contactUs/discord.webp" />
+                            </a>
                         </div>
                     </div>
 
@@ -158,12 +169,16 @@ const resetForm = () => {
                                 <!-- Email -->
                                 <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
                                     <Label class="leading-5">Email</Label>
-                                    <input v-model="email" required type="email" class="border-b-2 w-full outline-0 border-0" />
+                                    <input v-model="email" required type="email"
+                                        class="border-b-2 w-full outline-0 border-0" />
                                 </div>
                                 <!-- Phone Number -->
                                 <div class="w-full md:w-69.5 flex-1  h-13.75 font-medium space-y-2">
                                     <Label class="leading-5 text-black ">Phone Number</Label>
-                                    <input type="tel" v-model="phone" @input="phone = phone.replace(/\D/g,'')" pattern="09[0-9]{9}" title="Enter a valid PH number starting with 09" placeholder="" class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
+                                    <input type="tel" v-model="phone" @input="phone = phone.replace(/\D/g, '')"
+                                        pattern="09[0-9]{9}" title="Enter a valid PH number starting with 09"
+                                        placeholder=""
+                                        class="border-b-2 placeholder:text-black text-black w-full outline-0 border-0" />
                                 </div>
                             </div>
 
@@ -220,3 +235,21 @@ const resetForm = () => {
     </NuxtLayout>
 
 </template>
+
+
+<style scoped>
+.toast-enter-active,
+.toast-leave-active {
+    transition: all 0.4s ease;
+}
+
+.toast-enter-from {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+}
+
+.toast-leave-to {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+}
+</style>
