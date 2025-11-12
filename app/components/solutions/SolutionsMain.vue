@@ -32,7 +32,7 @@
                 <SolutionsSolutionProps 
                 title="JoyQ" 
                 text="Amusement Parks & Attractions" 
-                description="Enhances guest experience by enabling mobile or kiosk ride bookings, reducing lines, and offering real-time updates. Supports VIP and express queues for efficient crowd management and greater satisfaction." 
+                description="enhances the guest experience by allowing visitors to book ride slots via mobile or kiosks, reducing the need for physical lines. With real-time ride availability and status updates, it minimizes wait times and boosts overall satisfaction. Also supports tiered queuing options like VIP or express access, helping operators manage crowd flow efficiently while maximizing enjoyment for all guests." 
                 image="/images/solutions/joyQ.webp" 
                 link="/solutions_moreinfo/joyQ" 
                 />
@@ -40,7 +40,7 @@
                 <SolutionsSolutionProps 
                 title="FinQ" 
                 text="Banks & Financial Institutions" 
-                description="Optimizes customer flow by managing service-based queues with contactless ticketing, real-time updates, and dynamic teller assignments, ensuring faster and more organized banking transactions." 
+                description="optimizes customer flow by managing queues based on service types such as deposits, inquiries, or loan processing. It enables contactless ticketing, real-time wait updates, and dynamic teller assignments to balance workloads efficiently. By reducing idle time and enhancing queue visibility, it improves customer satisfaction while ensuring faster, more organized banking transactions."  
                 image="/images/solutions/finQ.webp" 
                 link="/solutions_moreinfo/finQ" 
                 />
@@ -48,7 +48,7 @@
                 <SolutionsSolutionProps 
                 title="ServiQ" 
                 text="Retail & Service Centers" 
-                description="Enhances customer experience through digital check-ins for services, real-time wait tracking, and queue analytics—enabling efficient staff allocation, reduced waiting time, and improved overall satisfaction." 
+                description="enhances customer experience by enabling digital check-ins for service desks, returns, or consultations. It helps manage customer flow during peak hours with real-time wait tracking and automated notifications. By minimizing physical queues and providing queue analytics, it supports better staff allocation, faster service delivery, and increased customer satisfaction." 
                 image="/images/solutions/serviQ.webp" 
                 link="/solutions_moreinfo/serviQ" 
                 />

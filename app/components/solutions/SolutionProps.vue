@@ -49,13 +49,13 @@ defineProps<{
                     class="font-normal text-xs sm:text-sm md:text-base lg:text-base  leading-relaxed text-gray-600 mx-auto lg:mx-0 w-full">
                     {{ description }}
                 </p>
-                <NuxtLink :to="link">
+                <!-- <NuxtLink :to="link">
                     <p
                         class="flex items-center justify-start lg:justify-start mt-5 gap-2 text-blue-400 text-sm sm:text-base">
                         More Info
                         <MoveRight class="w-5 h-5" />
                     </p>
-                </NuxtLink>
+                </NuxtLink> -->
             </div>
         </div>
     </div>
