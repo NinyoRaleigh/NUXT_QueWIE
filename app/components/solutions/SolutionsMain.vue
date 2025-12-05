@@ -12,7 +12,7 @@
                 Support that keeps your queues moving smoothly.
             </p>
       
-            <div class=" ">
+            <div>
                 <SolutionsSolutionProps 
                 title="CiviQ" 
                 text="Government Offices" 
