@@ -8,7 +8,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'QUEWIE',
-  ogTitle: 'My Amazing Site',
+  ogTitle: 'QUEWIE',
   description: 'Optimize Queues. Maximize Service.',
   ogDescription: 'Optimize Queues. Maximize Service.',
   ogImage: '/images/quewie_ogimage.webp',
