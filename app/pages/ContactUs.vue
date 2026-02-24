@@ -14,14 +14,9 @@ const subject = ref('General Inquiry')
 const message = ref('')
 const sending = ref(false)
 const success = ref(false)
-const sent = ref('')
 
 // required form
 const sendMessage = async () => {
-    // if (!firstName.value || !email.value || !message.value) {
-    //     return
-    // }
-    // send sa server/api/send.ts
     sending.value = true
     try {
         const res = await $fetch('/api/send', {
@@ -36,13 +31,8 @@ const sendMessage = async () => {
         })
         if (res.success) {
             success.value = true
-            sent.value = 'Message sent successfully!'
+            alert('Message sent successfully!')
             resetForm();
-
-            setTimeout(() => {
-                success.value = false
-                sent.value = ''
-            }, 3000)
         }
 
 
@@ -60,7 +50,7 @@ const resetForm = () => {
     lastName.value = ''
     email.value = ''
     phone.value = ''
-    subject.value = ''
+    subject.value = 'General Inquiry'
     message.value = ''
 }
 </script>
@@ -70,17 +60,6 @@ const resetForm = () => {
     <NuxtLayout name="marketing-layout">
         <div class="  lg:scale-83 xl:scale-100">
             <div class="py-30 lg:py-30 xl:pt-43.5 lg:pb-0 flex justify-center items-center md:px-40  xl:pb-20">
-                <transition name="toast">
-                    <div v-show="success" class="fixed top-5 left-1/2 -translate-x-1/2 w-11/12 max-w-sm bg-white shadow-lg rounded-lg flex flex-col overflow-hidden z-50">
-                        <div class="bg-blue-500 w-full h-10 flex justify-center items-center text-white">
-                            <Mail />
-                        </div>
-                        <div class="p-3 flex flex-col text-center text-green-500 space-y-1">
-                            <h1 class="font-semibold text-lg">Success</h1>
-                            <p class="text-sm">{{ sent }}</p>
-                        </div>
-                    </div>
-                </transition>
                 <div
                     class="w-90 sm:w-150 md:w-170 lg:w-299 p-2.5 lg:flex justify-center lg:justify-between font-sans relative shadow-[0_0_60px_30px_#00000008] rounded-xl text-xs sm:text-sm md:text-base">
                     <!-- left -->
@@ -149,9 +128,9 @@ const resetForm = () => {
                         </div>
                     </div>
 
-                    <!-- right -->
+                    <!-- Right Side -->
                     <form @submit.prevent="sendMessage" action="/api/send" method="POST">
-                        <div class=" flex-1 bg-white px-12.5 pt-15 text-gray-600 space-y-11.25">
+                        <div class=" flex-1 bg-white px-5 sm:px-12.5 pt-15 text-gray-600 space-y-11.25">
                             <div class="md:flex space-x-9.5 space-y-4">
                                 <!-- First Name -->
                                 <div class="w-full md:w-69.5 flex-1  h-13.75  font-medium space-y-2 ">
@@ -189,7 +168,7 @@ const resetForm = () => {
                                     <RadioGroup v-model="subject"
                                         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex w-full">
                                         <div class="flex items-center space-x-2">
-                                            <RadioGroupItem id="option-one" default-value="General Inquiry" />
+                                            <RadioGroupItem id="option-one" value="General Inquiry" default-value="General Inquiry" />
                                             <Label for="option-one" class="text-xs">General Inquiry</Label>
                                         </div>
                                         <div class="flex items-center space-x-2">
@@ -205,7 +184,6 @@ const resetForm = () => {
                                             <Label for="option-four" class="text-xs">Technical Support</Label>
                                         </div>
                                     </RadioGroup>
-
                                 </div>
                             </div>
 

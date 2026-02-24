@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 defineProps<{
     title: string,
     text: string,
@@ -7,10 +6,7 @@ defineProps<{
     image: string,
     link: string,
 }>();
-
 </script>
-
-
 <template>
     <div class="w-full flex  flex-col-reverse lg:flex lg:flex-row items-center justify-center  px-5 my-10  lg:my-15">
         <!-- left -->
@@ -26,26 +22,29 @@ defineProps<{
                     <p class=" leading-loose text-gray-500 underline  underline-offset-1">
                         <NuxtLink :to="link">Learn more</NuxtLink></p>
                 </div>
-
             </div>
         </div>
-
-
         <!-- right -->
         <div class="w-full lg:w-1/2 h-full mb-10 lg:pt-0 lg:pb-0 flex  items-center justify-center">
             <div class="relative w-[65%] lg:w-[85%] max-w-xl aspect-[136/82] flex justify-center items-center">
-                <!-- black box -->
                 <div
                     class="absolute bg-[#272727] rounded-lg sm:rounded-lg lg:rounded-2xl xl:rounded-3xl -left-[3%] -top-[4%] w-[20%] h-[28%]">
                 </div>
-                <!-- blue box -->
                 <div
                     class="absolute bg-quewie rounded-lg sm:rounded-lg lg:rounded-2xl xl:rounded-3xl -right-[3%] -bottom-[4%] w-[33%] h-[50%]">
                 </div>
-                <!-- main image -->
                 <NuxtImg :src="image" alt="Features Learnmore" class="absolute inset-0 w-full h-full object-contain" />
             </div>
         </div>
     </div>
 </template>
+
+
+
+
+
+
+
+
+
 
